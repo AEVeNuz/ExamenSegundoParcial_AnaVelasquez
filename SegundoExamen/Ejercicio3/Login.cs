@@ -28,19 +28,20 @@ namespace Ejercicio3
             usuario = usuarioDA.Login(UsuarioTextBox.Text, ClaveTextBox.Text);
 
 
-            /*if (usuario == null)
+            if (usuario == null)
             {
-                MessageBox.Show("Datos erróneos");
+                MessageBox.Show("Datos erróneos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if (!usuario.EstaActivo)
             {
-                MessageBox.Show("Usuario inactivo");
+                MessageBox.Show("Usuario inactivo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return ;
-            }*/
+            }
 
-            FrmUsuarios frmUsuarios = new FrmUsuarios();
-            frmUsuarios.Show();
+            FrmMenu frmMenu = new FrmMenu();
+            frmMenu.ShowDialog();
+            this.Hide();
 
             
         }
@@ -48,6 +49,11 @@ namespace Ejercicio3
         private void CancelarButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void UsuarioTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

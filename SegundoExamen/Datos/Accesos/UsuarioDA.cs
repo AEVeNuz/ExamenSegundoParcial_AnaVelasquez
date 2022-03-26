@@ -22,7 +22,7 @@ namespace Datos.Accesos
 
             try
             {
-                string sql = "SELECT * FROM usuario WHERE Codigo = @Codigo AND Clave = @Clave;";
+                string sql = "SELECT * FROM Usuarios WHERE Codigo = @Codigo AND Clave = @Clave;";
 
                 conn = new MySqlConnection(cadena);
 
